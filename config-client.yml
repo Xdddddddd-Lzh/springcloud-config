@@ -1,0 +1,33 @@
+---
+spring:
+    profiles: dev
+# 端口号配置
+server:
+  port: 8201
+# Eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+---
+spring:
+  profiles: test
+# 端口号配置
+server:
+  port: 8202
+# Eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+---
+spring:
+  profiles: prod
+# 端口号配置
+server:
+  port: 8203
+# Eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
